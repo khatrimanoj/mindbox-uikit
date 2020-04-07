@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Icon } from 'react-icons-kit';
 import {x} from 'react-icons-kit/feather/x';
 
@@ -8,7 +8,7 @@ const notification_alert = (props) =>
         let alert = [];
         for (let i=0; i <= 0; i++)
         {
-            alert.push(
+            alert.push( 
                 <div className="col-md-6 mb-30">
                 <div className={["alert " + props.class]}>
                     <div className="alert-icon">

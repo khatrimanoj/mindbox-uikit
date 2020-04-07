@@ -3,9 +3,9 @@ import Header from '../header/header';
 import Notificationalert from './notification-alert/notification_alert_list';
 import Notification_actionlist from './notification-action/notification_actionlist';
 import Notification_captionlist from './notification-caption/notification_captionlist';
+import Notificationbadgeslist from './notification-badges/Notification_badgeslist';
 import Tooltip from './tooltip/tooltip';
 import Avitar from './avitar/avitar';
-
 
 import {alertTriangle} from 'react-icons-kit/feather/alertTriangle';
 import {checkCircle} from 'react-icons-kit/feather/checkCircle';
@@ -14,7 +14,11 @@ import {ic_help_outline} from 'react-icons-kit/md/ic_help_outline';
 
 import {ic_check_circle} from 'react-icons-kit/md/ic_check_circle';
 import {ic_report_problem} from 'react-icons-kit/md/ic_report_problem';
-import {ic_error} from 'react-icons-kit/md/ic_error'
+import {ic_error} from 'react-icons-kit/md/ic_error';
+import {star} from 'react-icons-kit/feather/star';
+import {mail} from 'react-icons-kit/feather/mail';
+import {shoppingBag} from 'react-icons-kit/feather/shoppingBag'
+
 
 
 class notification extends Component {
@@ -202,6 +206,24 @@ class notification extends Component {
                 },
                
            ],
+           notification_badges: [
+            
+                {
+                    class: '',
+                    icondefine: shoppingBag,
+                    count: '10',
+                },
+                 {
+                    class: '',
+                    icondefine: star,
+                    count: '3',
+                 },
+                 {
+                    class: '',
+                    icondefine: mail,
+                    count: '28',
+                 },
+           ],
         }
     }
     render() {
@@ -233,6 +255,17 @@ class notification extends Component {
                          <div className="container mb-50">
                              <div className="row">
                                  <Notification_captionlist Notification_captionlistmsg={this.state.Notification_captionlist}/>
+                             </div>
+                         </div>
+                         <div className="col-md-12 mb-30">
+                              <p className="body1">Notification badges.</p>
+                         </div>
+                         <div className="container mb-50">
+                             <div className="row">
+                                 <ul className="btn-list">
+                                 <Notificationbadgeslist notification_badges_list={this.state.notification_badges}/>
+                                 </ul>
+                                
                              </div>
                          </div>
                          <div className="col-md-12 mb-30">

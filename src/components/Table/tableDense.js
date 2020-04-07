@@ -124,7 +124,7 @@ class tableDense extends Component {
             <tr key={item1} className={item1.isChecked ? 'bg-white-smoke' : '' }>
                 <td>
                     {/* checkbox select row code  */}
-                    <div className="custom-checkbox">
+                    <div className="custom-checkbox small">
                         <input
                             id={item1.id}
                             key={item1.id}
@@ -163,7 +163,7 @@ class tableDense extends Component {
                         <tr>
                             <th style={{ width: "20px" }}>
                                 { /* checkbox select row code  */ }
-                                <div className="custom-checkbox">
+                                <div className="custom-checkbox small">
                                     <input type="checkbox"
                                         id="all1"
                                         name="checkAll"

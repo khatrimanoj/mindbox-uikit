@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Table/Table.css'
 import Header from '../header/header';
 import TableStriped from '../Table/tableStriped';
 import TableDense from '../Table/tableDense';

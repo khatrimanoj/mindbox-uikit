@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import DatePicker from "react-datepicker";
+import Inputtext from "../inputs/inputtext/input_html";
 import { Icon } from 'react-icons-kit';
 import {mic} from 'react-icons-kit/feather/mic';
 import {xCircle} from 'react-icons-kit/feather/xCircle';
 import {plus} from 'react-icons-kit/feather/plus';
 import {minus} from 'react-icons-kit/feather/minus';
 import {chevronUp} from 'react-icons-kit/feather/chevronUp';
-import {chevronDown} from 'react-icons-kit/feather/chevronDown'
+import {chevronDown} from 'react-icons-kit/feather/chevronDown';
+import {calendar} from 'react-icons-kit/fa/calendar'
+
 
 
 class inputfunctional extends Component {
@@ -14,9 +19,12 @@ class inputfunctional extends Component {
         this.state = {
           clicks: 0,
           clicks1: 0,
-          show: true
+          data: '',
+          startDate: new Date()
         };
-      }
+        this.updateState = this.updateState.bind(this);
+        this.clearInput = this.clearInput.bind(this);
+      } 
     
       IncrementItem = () => {
         this.setState({ clicks: this.state.clicks + 1 });
@@ -30,7 +38,18 @@ class inputfunctional extends Component {
       DecreaseItem1 = () => {
         this.setState({ clicks1: this.state.clicks1 - 1 });
       }
-     
+      updateState(e) {
+        this.setState({data: e.target.value});
+     }
+      clearInput() {
+        this.setState({data: ''});
+        ReactDOM.findDOMNode(this.refs.myInput).focus();
+     }
+     handleChange = date => {
+      this.setState({
+        startDate: date
+      });
+    };
     
     render() {
         return (
@@ -52,19 +71,17 @@ class inputfunctional extends Component {
              <div className="col-md-3">
                     <p class="body1 mb-30">Voice input icon</p>
 
-                    <div className="form-group placeholder-label  right-icon">
-                        <input type="text" required  />
-                        <i className="inputicon"><Icon icon={mic} size={20} /></i>
-                        <label>Label</label>
-                    </div>
+                    <Inputtext label="Label" msg="Error message" value="Invalid text" iconaling="right" hasError> <i className="inputicon"><Icon icon={mic} size={20} /></i></Inputtext>
              </div>
              <div className="col-md-3">
                     <p class="body1 mb-30">Clear input field icon</p>
-
+                    
                     <div className="form-group placeholder-label  right-icon">
-                        <input  type="text" required  />
-                        <i  className="inputicon"><Icon icon={xCircle} size={20} /></i>
+                        <input  type="text" value = {this.state.data} onChange = {this.updateState} required  ref = "myInput"  />
+                        
                         <label>Label</label>
+                        {/* <h4>{this.state.data}</h4> */}
+                        <button className="clear-input" onClick = {this.clearInput}><Icon icon={xCircle} size={20} /></button>
                     </div>
              </div>
              <div className="col-md-3">
@@ -80,12 +97,21 @@ class inputfunctional extends Component {
                          <button className="btn btn-white">{ this.state.clicks1 }</button>
                          <button className="btn btn-white-smoke" onClick={this.IncrementItem1}><Icon icon={chevronUp} size={10} /></button>
                          <button className="btn btn-white-smoke" onClick={this.DecreaseItem1}><Icon icon={chevronDown} size={10} /></button>
-                         
-                        
                          </div>
                        
 
         
+                    </div>
+             </div>
+             <div className="col-md-3">
+                    <p class="body1 mb-30">Voice input icon</p>
+
+                    <div className="form-group placeholder-label  left-icon">
+                         <DatePicker
+                          selected={this.state.startDate}
+                            onChange={this.handleChange}
+                          />        
+                        <i className="inputicon"><Icon icon={calendar} size={20} /></i>
                     </div>
              </div>
             </>

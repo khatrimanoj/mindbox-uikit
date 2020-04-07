@@ -1,0 +1,720 @@
+/* -------- chips & tag css start ------------ */
+
+/* ======= input chips css start ======== */
+.input-chips-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.input-chips-wrapper .row {
+  align-items: baseline;
+}
+.input-chips-wrapper div > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input-chips-wrapper div > div > div:last-child {
+  margin-right: 0;
+}
+.input-chips-wrapper .form-group.input-chips {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-bottom: 30px;
+}
+.input-chips-wrapper .form-group.input-chips input:disabled,
+.input-chips-wrapper .form-group.input-chips.disabled input,
+.input-chips-wrapper .form-group.input-chips.disabled .inputicon,
+.input-chips-wrapper .form-group.input-chips.disabled .cross-icon {
+  background-color: var(--White-Smoke) !important;
+  color: var(--light-gray) !important;
+  cursor: not-allowed;
+}
+.input-chips-wrapper .form-group.input-chips.default-chips input {
+  background-color: var(--White-Smoke);
+  border: none;
+}
+
+.input-chips-wrapper .form-group.input-chips.default-chips input:focus,
+.input-chips-wrapper .form-group.input-chips.default-chips.focus input {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+.input-chips-wrapper .form-group.input-chips.outline-chips input:focus,
+.input-chips-wrapper .form-group.input-chips.outline-chips.focus input {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+.input-chips-wrapper .form-group.input-chips.outline-chips.focus .inputicon, 
+.input-chips-wrapper .form-group.input-chips.outline-chips.focus .cross-icon,
+.input-chips-wrapper .form-group.input-chips.default-chips.focus .inputicon,
+.input-chips-wrapper .form-group.input-chips.default-chips.focus .cross-icon  {
+  color: var(--black);
+}
+.input-chips-wrapper .form-group.input-chips.filled-chips input {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+}
+.input-chips-wrapper .form-group.input-chips.filled-chips input:focus,
+.input-chips-wrapper .form-group.input-chips.filled-chips.focus input {
+  background-color: var(--primary-variant);  
+}
+
+.input-chips-wrapper .form-group.input-chips.filled-chips .inputicon, 
+.input-chips-wrapper .form-group.input-chips.filled-chips .cross-icon {
+  color: var(--white);
+}
+.input-chips-wrapper .form-group.input-chips input {
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  max-width: 114px;
+  font-size: 12px;
+  text-indent: 30px;
+}
+.input-chips-wrapper .form-group.input-chips input.rounded {
+  border-radius: 30px;
+}
+.input-chips-wrapper .form-group.input-chips .inputicon {
+  left: 6px;
+  top: 5px;
+}
+.input-chips-wrapper .form-group.input-chips .cross-icon {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  bottom: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+/* ======= input chips css end ======== */
+
+
+/* ======= selection chips css start ======== */
+.selection-chips .form-group.input-chips, 
+.filter-chips .form-group.input-chips {
+  margin-right: 8px;
+}
+.selection-chips .form-group.input-chips:last-child,
+.filter-chips .form-group.input-chips:last-child {
+  margin-right: 0;
+}
+.selection-chips .form-group.input-chips label,
+.filter-chips .form-group.input-chips label {
+  position: relative;
+  padding: 8px 15px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+}
+.selection-chips .form-group.input-chips label.rounded,
+.filter-chips .form-group.input-chips label.rounded {
+  border-radius: 30px;
+}
+.selection-chips .form-group.input-chips.default-chips label,
+.filter-chips .form-group.input-chips.default-chips label {
+  background-color: var(--White-Smoke);
+}
+.selection-chips .form-group.input-chips.default-chips label.disabled,
+.filter-chips .form-group.input-chips.default-chips label.disabled {
+  background-color: var(--White-Smoke);
+  color: var(--light-gray);
+}
+.filter-chips .form-group.input-chips.outline-chips label.disabled,
+.filter-chips .form-group.input-chips.filled-chips label.disabled {
+  color: var(--light-gray);
+  border: 1px solid var(--White-Smoke);
+}
+.selection-chips .form-group.input-chips.default-chips label.selected,
+.filter-chips .form-group.input-chips.default-chips label.selected  {
+  background-color: var(--black);
+  color: var(--white);
+}
+.selection-chips .form-group.input-chips.default-chips label.focus,
+.filter-chips .form-group.input-chips.default-chips label.focus  {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+.selection-chips .form-group.input-chips.outline-chips label,
+.filter-chips .form-group.input-chips.outline-chips label,
+.filter-chips .form-group.input-chips.filled-chips label {
+  border: 1px solid var(--light-gray);
+}
+.selection-chips .form-group.input-chips.outline-chips label.disabled {
+  border: 1px solid var(--White-Smoke);
+  color: var(--light-gray);
+}
+.selection-chips .form-group.input-chips.outline-chips label.focus,
+.selection-chips .form-group.input-chips.outline-chips label.focus input:focus,
+.filter .form-group.input-chips.outline-chips label.focus {
+  background-color: var(--White-Smoke);
+}
+.selection-chips .form-group.input-chips.outline-chips label.selected,
+.selection-chips .form-group.input-chips.outline-chips label.selected input:focus,
+.filter-chips .form-group.input-chips.filled-chips label.selected {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+}
+.filter-chips .form-group.input-chips.outline-chips label.focus,
+.filter-chips .form-group.input-chips.filled-chips label.focus,
+.filter-chips .form-group.input-chips.outline-chips label.hover-selected {
+  border: 1px solid var(--light-gray);
+  background-color: var(--White-Smoke);
+  color: var(--black);
+}
+.filter-chips .form-group.input-chips.outline-chips label.hover-selected,
+.filter-chips .form-group.input-chips.filled-chips label.selected,
+.filter-chips .form-group.input-chips.default-chips label.selected {
+  text-indent: 20px;
+}
+.filter-chips .form-group.input-chips.outline-chips label.selected {
+  border: 1px solid var(--black);
+  color: var(--black);
+  text-indent: 20px;
+}
+.filter-chips .form-group.input-chips.default-chips label.hover-selected {
+  background-color: var(--gray);
+  color: var(--white);
+  text-indent: 20px;
+}
+.filter-chips .form-group.input-chips.filled-chips label.hover-selected {
+  background-color: var(--primary-variant);
+  color: var(--white);
+  border: 1px solid var(--primary-variant);
+  text-indent: 20px;
+}
+.filter-chips .form-group.input-chips.default-chips label.selected::after,
+.filter-chips .form-group.input-chips.default-chips label.hover-selected::after,
+.filter-chips .form-group.input-chips.outline-chips label.selected::after,
+.filter-chips .form-group.input-chips.outline-chips label.hover-selected::after,
+.filter-chips .form-group.input-chips.filled-chips label.selected::after,
+.filter-chips .form-group.input-chips.filled-chips label.hover-selected::after {
+  content: '';
+  width: 13px;
+  height: 6px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+.filter-chips .form-group.input-chips.outline-chips label.selected::after,
+.filter-chips .form-group.input-chips.outline-chips label.hover-selected::after {
+  border-color: var(--black);
+}
+.selection-chips .form-group.input-chips input,
+.filter-chips .form-group.input-chips input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* ======= selection chips css end ======== */
+
+
+/* ======= chips within textfield css start ======== */
+.tags-input {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  border: 2px solid #d6d8da;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  position: relative;
+}
+.tags-input::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  scrollbar-width: thin;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+.tags-input:focus-within {
+  border: 2px solid var(--primary);
+}
+.tags-input .form-group {
+  width: auto;
+  float: none;
+}
+.tags-input .form-group input {
+  flex: 1 1;
+  border: none;
+  width: auto;
+  height: 36px;
+  font-size: 14px;
+  text-indent: 0;
+  color: var(--gray);
+  max-width: 150px;
+}
+.tags-input.md .form-group input {
+  height: 44px;
+}
+.tags-input .form-group input::placeholder {
+  color: var(--gray);
+}
+.tags-input input:focus {
+  outline: transparent;
+}
+.tags {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 0px 0 15px;
+  margin: 2px 0;
+  list-style-type: none;
+  color: var(--gray);
+  position: relative;
+}
+.tags li.to {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.tag {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  padding: 4px 8px 4px 4px;
+  margin-right: 8px;
+  font-size: 14px;
+  list-style: none;
+  background-color: var(--White-Smoke);
+  margin-right: 8px;
+}
+.tag.draggable {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.tag.draggable .tag-close-icon {
+  color: var(--white);
+}
+.tag[draggable] {
+  cursor: grabbing;
+}
+.tag.rounded {
+  border-radius: 30px;
+}
+.tag.rounded img {
+  border-radius: 30px;
+}
+.tag .tag-title {
+  margin: 0 8px;
+  text-transform: capitalize;
+}
+.tag .tag-close-icon {
+  display: block;
+  line-height: 16px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+/********* nolabel chips css start *******/
+.no-label-chips .form-group.input-chips.squared {
+  position: relative;
+  margin-right: 15px;
+}
+.no-label-chips .form-group.input-chips.squared:last-child {
+  margin-right: 0;
+}
+.no-label-chips .form-group.input-chips.squared label {
+  position: relative;
+  border: 1px solid var(--light-gray);
+  width: 32px;
+  height: 32px;
+}
+.no-label-chips .form-group.input-chips.squared label.sm {
+  width: 24px;
+  height: 24px;
+}
+.no-label-chips .form-group.input-chips.squared label.rounded,
+.no-label-chips .form-group.input-chips.squared label.rounded::before {
+  border-radius: 32px;
+  overflow: hidden;
+}
+.no-label-chips .form-group.input-chips.squared label::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+}
+.no-label-chips .form-group.input-chips.squared input:checked ~ label.red::before {
+  background-color: var(--red);
+}
+.no-label-chips .form-group.input-chips.squared input:checked ~ label.yellow::before {
+  background-color: var(--yellow);
+}
+.no-label-chips .form-group.input-chips.squared input:checked ~ label.green::before {
+  background-color: var(--green);
+}
+.no-label-chips .form-group.input-chips.squared input:checked ~ label.pelorous::before {
+  background-color: var(--Pelorous);
+}
+.no-label-chips .form-group.input-chips.squared input:checked ~ label.smoke::before {
+  background-color: var(--White-Smoke);
+}
+.no-label-chips .squared input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+/********* nolabel chips css end *******/
+
+/* ======= chips within textfield css end ======== */
+
+
+/* ======= filter-chips with image css start ======== */
+.filter-img-chips .form-group.input-chips {
+  margin-right: 8px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.filter-img-chips .form-group.input-chips:last-child {
+  margin-right: 0;
+}
+.filter-img-chips .form-group.input-chips label {
+  position: relative;
+  padding: 7px 10px 7px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+  text-indent: 24px;
+}
+.filter-img-chips .form-group.input-chips input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.filter-img-chips .form-group.input-chips label {
+  border: 1px solid var(--light-gray);
+}
+.filter-img-chips .form-group.input-chips label.rounded {
+  border-radius: 30px;
+}
+.filter-img-chips .form-group.input-chips label.rounded::before {
+  border-radius: 16px;
+}
+.filter-img-chips .form-group.input-chips label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-color: var(--orange);
+  left: 8px;
+}
+.filter-img-chips .form-group.input-chips label.md {
+  position: relative;
+  padding: 7px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+  text-indent: 24px;
+}
+.filter-img-chips .form-group.input-chips label.md::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-color: var(--orange);
+  left: 3px;
+  top: 3px;
+}
+.filter-img-chips .form-group.input-chips label.md.rounded {
+  border-radius: 24px;
+}
+.filter-img-chips .form-group.input-chips label.disabled {
+  border: 1px solid var(--White-Smoke);
+  color: var(--light-gray);
+}
+.filter-img-chips .form-group.input-chips label.disabled::before {
+  opacity: 0.5;
+}
+.filter-img-chips .form-group.input-chips label.focus,
+.filter-img-chips .form-group.input-chips label.hover-selected {
+  background-color: var(--White-Smoke);
+  color: var(--black);
+}
+.filter-img-chips .form-group.input-chips label.selected {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+.filter-img-chips .form-group.input-chips label.selected::after,
+.filter-img-chips .form-group.input-chips label.hover-selected::after,
+.filter-img-chips .form-group.input-chips label.white::after,
+.filter-img-chips .form-group.input-chips label.yellow::after,
+.filter-img-chips .form-group.input-chips label.green::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+.filter-img-chips .form-group.input-chips label.selected::after,
+.filter-img-chips .form-group.input-chips label.hover-selected::after {
+  width: 8px;
+  height: 3px;
+  top: 11px;
+  left: 11px;
+}
+.filter-img-chips .form-group.input-chips label.md.selected::after,
+.filter-img-chips .form-group.input-chips label.md.hover-selected::after {
+  width: 13px;
+  height: 6px;
+  top: 9px;
+  left: 8px;
+}
+.filter-img-chips .form-group.input-chips label.red::before,
+.filter-img-chips .form-group.input-chips label.md.red::before {
+  background-color: var(--red);
+}
+.filter-img-chips .form-group.input-chips label.yellow::before,
+.filter-img-chips .form-group.input-chips label.md.yellow::before {
+  background-color: var(--yellow);
+}
+.filter-img-chips .form-group.input-chips label.green::before,
+.filter-img-chips .form-group.input-chips label.md.green::before {
+  background-color: var(--green);
+}
+.filter-img-chips .form-group.input-chips label.pelorous::before,
+.filter-img-chips .form-group.input-chips label.md.pelorous::before {
+  background-color: var(--Pelorous);
+}
+.filter-img-chips .form-group.input-chips label.white::before,
+.filter-img-chips .form-group.input-chips label.md.white::before {
+  background-color: var(--white);
+  border: 1px solid var(--White-Smoke);
+}
+.filter-img-chips .form-group.input-chips label.white::before {
+  top: 6px;
+}
+.filter-img-chips .form-group.input-chips label.md.white::before {
+  top: 2px;
+}
+.filter-img-chips .form-group.input-chips label.white::after,
+.filter-img-chips .form-group.input-chips label.yellow::after,
+.filter-img-chips .form-group.input-chips label.green::after {
+  border-color: var(--black);
+  left: 0;
+  width: 8px;
+  height: 3px;
+  top: 11px;
+  left: 11px;
+}
+.filter-img-chips .form-group.input-chips label.white.md::after,
+.filter-img-chips .form-group.input-chips label.yellow.md::after,
+.filter-img-chips .form-group.input-chips label.green.md::after {
+  width: 13px;
+  height: 6px;
+  top: 9px;
+  left: 8px;
+}
+.filter-img-chips .form-group.input-chips label.green::after {
+  border-color: var(--white);
+}
+/* ======= filter-chips with image css end ======== */
+
+/* ======= filter-chips with no label css start ======== */
+.no-label-chips.filter .form-group.input-chips.squared label.red::before {
+  background-color: var(--red);
+}
+.no-label-chips.filter .form-group.input-chips.squared label.yellow::before {
+  background-color: var(--yellow);
+}
+.no-label-chips.filter .form-group.input-chips.squared label.green::before {
+  background-color: var(--green);
+}
+.no-label-chips.filter .form-group.input-chips.squared label.pelorous::before {
+  background-color: var(--Pelorous);
+}
+.no-label-chips.filter .form-group.input-chips.squared label.smoke::before {
+  background-color: var(--White-Smoke);
+}
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 1;
+  transform: rotate(-45deg);
+  border-color: var(--black);
+  width: 11px;
+  height: 5px;
+  top: 10px;
+  left: 9px;
+}
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label.sm::before {
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+}
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label.sm::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 1;
+  transform: rotate(-45deg);
+  border-color: var(--black);
+  width: 7px;
+  height: 3px;
+  top: 7px;
+  left: 7px;
+}
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label.green::after,
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label.red::after,
+.no-label-chips.filter .form-group.input-chips.squared input:checked ~ label.pelorous::after {
+  border-color: var(--white);
+}
+/* ======= filter-chips with no label css end ======== */
+
+/* ======= tags start ======== */
+.tags-list .col-md-2 {
+  flex: 0 0 16.667%;
+  max-width: 16.667%;
+}
+.tags-list .col-md-3 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.tags-list .flex-div {
+  justify-content: flex-start;
+}
+.tags-list .form-group {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-bottom: 30px;
+  margin-right: 8px;
+}
+.tags-list .form-group:last-child,
+.tags-list .form-group:nth-child(2),
+.tags-list .form-group.color:nth-child(3) {
+  margin-right: 0;
+}
+.tags-list .form-group.color:nth-child(2) {
+  margin-right: 8px;
+}
+.tags-list .form-group label {
+  position: relative;
+  padding: 4px 15px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+  margin-bottom: 0;
+}
+.tags-list .form-group.outline-tags label {
+  border: 1px solid var(--light-gray);
+}
+.tags-list .form-group.filled-tags label {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.tags-list .form-group.default-tags label {
+  background-color: var(--White-Smoke);
+}
+.tags-list .form-group label.rounded {
+  border-radius: 24px;
+}
+.tags-list .form-group label input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tags-list .default label {
+  background-color: var(--White-Smoke);
+}
+.tags-list .form-group label.focus {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+.tags-list .form-group.outline-tags label.focus {
+  background-color: var(--White-Smoke);
+}
+.tags-list .form-group.color label {
+  background-color: transparent;
+  border: 1px solid var(--light-gray);
+}
+.tags-list .form-group.filled-tags label.focus {
+  background-color: transparent;
+  color: var(--primary-variant);
+  border: 1px solid var(--primary-variant);
+}
+.tags-list .form-group.color-outline label.Red {
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+.tags-list .form-group.color-outline label.Green {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+.tags-list .form-group.color-outline label.Blue {
+  border: 1px solid var(--primary-variant);
+  color: var(--primary);
+}
+
+.tags-list .form-group.color-default label.Red {
+  border: 1px solid #fce8e8;
+  color: var(--red);
+  background-color: #fce8e8;
+}
+.tags-list .form-group.color-default label.Green {
+  border: 1px solid #e7f2e9;
+  color: var(--green);
+  background-color: #e7f2e9;
+}
+.tags-list .form-group.color-default label.Blue {
+  border: 1px solid #e6f6fd;
+  color: var(--primary-variant);
+  background-color: #e6f6fd;
+}
+.tags-list .form-group.number label {
+  padding: 4px 8px;
+}
+.tags-list .form-group.number label.red {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+.tags-list .form-group.number label.yellow {
+  background-color: var(--yellow);
+  color: var(--black);
+  border: none;
+}
+/* ======= tags end ======== */
+
+/* -------- chips & tag css end ------------ */
